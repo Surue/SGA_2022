@@ -23,26 +23,36 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        var normal = other.GetContact(0).normal;
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            var vel = other.rigidbody.velocity;
+            vel.y = startingYVel;
+            
+            body.velocity = vel;
+        }
+        else
+        {
+            var normal = other.GetContact(0).normal;
 
-        Vector2 vel = previousVelocity;
-        if (normal.y < 0 && previousVelocity.y > 0)
-        {
-            vel.y = previousVelocity.y * -1;
-        }
-        if (normal.y > 0 && previousVelocity.y < 0)
-        {
-            vel.y = previousVelocity.y * -1;
-        }
+            Vector2 vel = previousVelocity;
+            if (normal.y < 0 && previousVelocity.y > 0)
+            {
+                vel.y = previousVelocity.y * -1;
+            }
+            if (normal.y > 0 && previousVelocity.y < 0)
+            {
+                vel.y = previousVelocity.y * -1;
+            }
         
-        if (normal.x < 0 && previousVelocity.x > 0)
-        {
-            vel.x = previousVelocity.x * -1;
+            if (normal.x < 0 && previousVelocity.x > 0)
+            {
+                vel.x = previousVelocity.x * -1;
+            }
+            if (normal.x > 0 && previousVelocity.x < 0)
+            {
+                vel.x = previousVelocity.x * -1;
+            }
+            body.velocity = vel;   
         }
-        if (normal.x > 0 && previousVelocity.x < 0)
-        {
-            vel.x = previousVelocity.x * -1;
-        }
-        body.velocity = vel;
     }
 }

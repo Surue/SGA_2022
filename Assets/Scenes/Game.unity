@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &58121661
 Rigidbody2D:
   serializedVersion: 4
@@ -485,6 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &155200380
 Rigidbody2D:
   serializedVersion: 4
@@ -553,6 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &157707208
 Rigidbody2D:
   serializedVersion: 4
@@ -653,6 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &309708176
 Rigidbody2D:
   serializedVersion: 4
@@ -875,7 +879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390400673}
   - component: {fileID: 390400674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1127,6 +1131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &454289390
 Rigidbody2D:
   serializedVersion: 4
@@ -1421,6 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &526793689
 Rigidbody2D:
   serializedVersion: 4
@@ -1940,6 +1946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &715838079
 Rigidbody2D:
   serializedVersion: 4
@@ -2102,6 +2109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &834990174
 Rigidbody2D:
   serializedVersion: 4
@@ -2495,6 +2503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &949583205
 Rigidbody2D:
   serializedVersion: 4
@@ -2647,6 +2656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &985910637
 Rigidbody2D:
   serializedVersion: 4
@@ -2747,6 +2757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &1025763152
 Rigidbody2D:
   serializedVersion: 4
@@ -2815,6 +2826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &1132562109
 Rigidbody2D:
   serializedVersion: 4
@@ -3715,6 +3727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &1411421924
 Rigidbody2D:
   serializedVersion: 4
@@ -4375,6 +4388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &1718294150
 Rigidbody2D:
   serializedVersion: 4
@@ -4503,7 +4517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1738595431}
   - component: {fileID: 1738595432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4777,6 +4791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &1862746027
 Rigidbody2D:
   serializedVersion: 4
@@ -4961,6 +4976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &1918177706
 Rigidbody2D:
   serializedVersion: 4
@@ -5541,6 +5557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &2049248998
 Rigidbody2D:
   serializedVersion: 4
@@ -5609,6 +5626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &2062699419
 Rigidbody2D:
   serializedVersion: 4
@@ -5677,6 +5695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &2083617414
 Rigidbody2D:
   serializedVersion: 4
@@ -5835,6 +5854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e15cd8a92d254286f1e283f5b1fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 1
 --- !u!50 &2128863704
 Rigidbody2D:
   serializedVersion: 4
@@ -5913,7 +5933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 281285573333283772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5931,7 +5951,7 @@ GameObject:
   - component: {fileID: 8429034569989931397}
   - component: {fileID: 2753615018137136579}
   - component: {fileID: 8429034569989931398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
