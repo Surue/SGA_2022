@@ -13,16 +13,18 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D body;
 
     private Vector2 velocity;
+
+    private Vector2 ballOffset;
     
     void Start()
     {
-        
+        ballOffset = ball.transform.position - transform.position;
     }
 
     void Update()
     {
         // Start game 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && ball != null)
         {
             var vel = new Vector2
             {
@@ -30,6 +32,14 @@ public class PlayerController : MonoBehaviour
                 y =  ball.GetComponent<Ball>().startingYVel
             };
             ball.GetComponent<Rigidbody2D>().velocity = vel;
+
+            ball = null;
+        }
+        
+        // Stick ball to player
+        if (ball != null)
+        {
+            ball.transform.position = transform.position + (Vector3)ballOffset;
         }
         
         // Right movement
