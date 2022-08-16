@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathZone : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class DeathZone : MonoBehaviour
         if (other.gameObject.TryGetComponent<Ball>(out Ball ball))
         {
             Destroy(other.gameObject);
+
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

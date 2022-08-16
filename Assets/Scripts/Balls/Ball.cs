@@ -10,11 +10,6 @@ public class Ball : MonoBehaviour
     public float startingYVel;
 
     public Vector2 previousVelocity;
-    
-    void Start()
-    {
-        
-    }
 
     void FixedUpdate()
     {
