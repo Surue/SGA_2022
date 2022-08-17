@@ -6,58 +6,59 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public float speed = 5;
+    [SerializeField] private float _speed = 5;
+    [SerializeField] private GameObject _ball;
+    [SerializeField] private Rigidbody2D _body;
 
-    public GameObject ball;
-
-    public Rigidbody2D body;
-
-    private Vector2 velocity;
-
-    private Vector2 ballOffset;
+    private Vector2 _velocity;
+    private Vector2 _ballOffset;
     
     void Start()
     {
-        ballOffset = ball.transform.position - transform.position;
+        // Cache the offset of the ball
+        _ballOffset = _ball.transform.position - transform.position;
     }
 
     void Update()
     {
         // Start game 
-        if (Input.GetKeyDown(KeyCode.Space) && ball != null)
+        if (Input.GetKeyDown(KeyCode.Space) && _ball != null)
         {
             var vel = new Vector2
             {
-                x = body.velocity.x, 
-                y =  ball.GetComponent<Ball>().startingYVel
+                x = _body.velocity.x, 
+                y =  _ball.GetComponent<Ball>().StartingYVel
             };
-            ball.GetComponent<Rigidbody2D>().velocity = vel;
+            _ball.GetComponent<Rigidbody2D>().velocity = vel;
 
-            ball = null;
+            _ball = null;
         }
         
         // Stick ball to player
-        if (ball != null)
+        if (_ball != null)
         {
-            ball.transform.position = transform.position + (Vector3)ballOffset;
+            _ball.transform.position = transform.position + (Vector3)_ballOffset;
         }
         
-        // Right movement
+        // Movements
         if (Input.GetAxis("Horizontal") > 0)
         {
-            velocity = Vector2.right * speed;
+            // Right movement
+            _velocity = Vector2.right * _speed;
         } else if (Input.GetAxis("Horizontal") < 0)
         {
-            velocity = Vector2.left * speed;
+            // Left movement
+            _velocity = Vector2.left * _speed;
         }
         else
         {
-            velocity = Vector2.zero;
+            // No input => set the velocity to zero
+            _velocity = Vector2.zero;
         }
     }
 
     private void FixedUpdate()
     {
-        body.velocity = velocity * Time.fixedDeltaTime;
+        _body.velocity = _velocity * Time.fixedDeltaTime;
     }
 }

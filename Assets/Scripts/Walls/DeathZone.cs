@@ -1,28 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DeathZone : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.TryGetComponent<Ball>(out Ball ball))
-        {
-            Destroy(other.gameObject);
+        // Ignore collision if it's not a ball
+        if (!other.gameObject.TryGetComponent(out Ball ball)) return;
+        
+        // Destroy the ball
+        Destroy(other.gameObject);
 
-            SceneManager.LoadScene("MainMenu");
-        }
+        // Return to main menu
+        GameManager.instance.ReturnMainMenu();
     }
 }

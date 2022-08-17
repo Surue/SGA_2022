@@ -19,11 +19,19 @@ public class BricksInitData : ScriptableObject
     [SerializeField] private AudioClip _audioClip;
     [SerializeField][Range(0, 2)] private float _fadeOutDuration;
 
+    /// <summary>
+    /// Get the maximum life points
+    /// </summary>
+    /// <returns></returns>
     public int GetMaxLifePoints()
     {
         return _maxLifePoints;
     }
 
+    /// <summary>
+    /// Get the score to win when destroying the brick
+    /// </summary>
+    /// <returns></returns>
     public int GetScore()
     {
         return _score;

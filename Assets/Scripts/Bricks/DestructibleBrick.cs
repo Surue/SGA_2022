@@ -1,39 +1,34 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DestructibleBrick : MonoBehaviour
 {
     [SerializeField] public BricksInitData _bricksInitData;
+
+    private LevelManager _levelManager;
     
     private int _lifePoints = 1;
     private int _score;
-
-    private static int count;  
     
     void Start()
     {
         _lifePoints = _bricksInitData.GetMaxLifePoints();
         _score = _bricksInitData.GetScore();
-        
-        count += 1;
-
-        LogCount();
     }
 
-    public static void LogCount()
+    public void SetupLevelManager(LevelManager levelManager)
     {
-        Debug.Log("Count = " + count);
+        _levelManager = levelManager;
     }
-
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
+        // Reduce life
         _lifePoints--;
+
+        if (_lifePoints > 0) return;
         
-        if (_lifePoints <= 0)
-        {
-            Destroy(gameObject);
-        }
+        // If lifePoints if below zero => Destroy the brick
+        _levelManager.OnDestroyBrick();
+        Destroy(gameObject);
     }
 }

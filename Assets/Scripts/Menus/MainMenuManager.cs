@@ -22,18 +22,13 @@ public class MainMenuManager : MonoBehaviour
         buttonQuit.onClick.RemoveListener(QuitApplication);
     }
 
-    void Update()
-    {
-        
-    }
-
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        GameManager.instance.StartGame();
     }
 
     public void QuitApplication()
     {
-        Application.Quit();
+        GameManager.instance.QuitApplication();
     }
 }
